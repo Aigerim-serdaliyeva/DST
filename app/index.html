@@ -109,8 +109,8 @@
     <section class="section s-service" id="service">
       <div class="container">
         <h2 class="section-title">Услуги</h2>
-        <div class="row">
-          <div class="col-lg-7 col-md-9">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-md-12 d-flex">
             <div class="service__tab">
               <div class="service__title">Уборка квартир</div>
               <div class="tab">
@@ -128,13 +128,21 @@
                           <div class="komnata__num">1</div>
                           <div class="komnata__text">комната</div>
                         </div>
+                        <div class="komnata__number">
+                          <input class="number" type="number" name="Ответ1" value="1">
+                          <div class="komnata__month">раз (-а) в месяц</div>
+                        </div>
                         <div class="komnata__price">6 300 тг.</div>
                         <button class="button">Заказать</button>
                       </div>
                       <div class="komnata">
                         <div class="komnata__block">
                           <div class="komnata__num">2</div>
-                          <div class="komnata__text">комната</div>
+                          <div class="komnata__text">комнаты</div>
+                        </div>
+                        <div class="komnata__number">
+                          <input class="number" type="number" name="Ответ2" value="1">
+                          <div class="komnata__month">раз (-а) в месяц</div>
                         </div>
                         <div class="komnata__price">7 300 тг.</div>
                         <button class="button">Заказать</button>
@@ -142,7 +150,11 @@
                       <div class="komnata">
                         <div class="komnata__block">
                           <div class="komnata__num">3</div>
-                          <div class="komnata__text">комната</div>
+                          <div class="komnata__text">комнаты</div>
+                        </div>
+                        <div class="komnata__number">
+                          <input class="number" type="number" name="Ответ3" value="1">
+                          <div class="komnata__month">раз (-а) в месяц</div>
                         </div>
                         <div class="komnata__price">8 200 тг.</div>
                         <button class="button">Заказать</button>
@@ -162,7 +174,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-5 col-md-7">
+          <div class="col-lg-5 col-md-8">
             <div class="service">
               <div class="service__title">Уборка коттеджей</div>
               <div class="service__text">Владеть коттеджом – большое удовольствие. Убирать коттедж – удовольствие сомнительное. Для всех… кроме нас! Мы с удовольствием наведём порядок и чистоту в вашем коттедже.</div>
@@ -458,7 +470,7 @@
             <div class="service2__block">
               <div class="service2__title">Мытье окон</div>
               <div class="service2__price">1 000 тг/3м²</div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Мытье окон"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -467,7 +479,7 @@
               <div class="service2__title">Мытье кухонной техники</div>
               <div class="service2__title">Микроволновка <span>900 тг.</span></div>
               <div class="service2__title">Холодильник/духовка <span>1 500 тг.</span></div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Мытье кухонной техники"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -475,7 +487,7 @@
             <div class="service2__block">
               <div class="service2__title">Химчистка ковровых изделий</div>
               <div class="service2__price">200 тг/м²</div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Химчистка ковровых изделий"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -483,7 +495,7 @@
             <div class="service2__block">
               <div class="service2__title">Уборка прилегающей территории</div>
               <div class="service2__price"><span>от</span> 1 500 тг</div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Уборка прилегающей территории"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -491,7 +503,7 @@
             <div class="service2__block">
               <div class="service2__title">Мытье балконов и лоджий</div>
               <div class="service2__price"><span>от </span> 1 900 тг</div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Мытье балконов и лоджий"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -500,7 +512,7 @@
               <div class="service2__title">Мытье шкафов</div>
               <div class="service2__title">Кухонный шкаф <span>1 200 тг.</span></div>
               <div class="service2__title">Обычный шкаф <span>1 600 тг.</span></div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Мытье шкафов, Кухонный шкаф, Обычный шкаф"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -508,7 +520,7 @@
             <div class="service2__block">
               <div class="service2__title">Мытье стен</div>
               
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Мытье стен"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -516,7 +528,7 @@
             <div class="service2__block">
               <div class="service2__title">Мытье посуды</div>
               <div class="service2__price"><span>от</span> 1 000 тг</div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Мытье посуды"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -524,7 +536,7 @@
             <div class="service2__block">
               <div class="service2__title">Глажка</div>
               <div class="service2__price"><span>от</span> 1 000 тг</div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Глажка"}]}'>Заказать</button>
             </div>
           </div>
           <div class="service2">
@@ -532,7 +544,7 @@
             <div class="service2__block">
               <div class="service2__title">Уборка места домашнего питомца</div>
               <div class="service2__price"><span>от</span> 1 000 тг</div>
-              <button class="button">Заказать</button>
+              <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Разовые услуги","value":"Уборка места домашнего питомца"}]}'>Заказать</button>
             </div>
           </div>
         </div>
@@ -688,13 +700,44 @@
 
     <div class="remodal__title inverse">Оставьте заявку. <br>
         Наш менеджер свяжется
+        с вами в течении 15 минут.</div>
+
+    <div class="form form--vertical">
+      <form action="/mail.php" method="post">
+        <div class="form__content">
+          <input type="hidden" name="info" value="Обратный звонок">
+
+          <div class="input-div">
+            <input type="text" class="input" name="name" placeholder="Представьтесь">
+          </div>
+
+          <div class="input-div">
+            <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required minlength="10">
+            <span class="error-message">Заполните это поле</span>
+          </div>
+
+          <button class="button button--red ajax-submit" type="submit" id="zakazat_zvonok">Заказать звонок</button>
+
+          <div class="form__info inverse">*Ваши данные в безопасности
+            и не будут переданы третьим лицам</div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="remodal remodal--small" data-remodal-id="zakazat_uslugi" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+
+    <div class="remodal__title inverse">Оставьте заявку. <br>
+        Наш менеджер свяжется
         с вами в течении 15 минут. <br>
         Всё обсудим, всё рассчитаем!</div>
 
     <div class="form form--vertical">
       <form action="/mail.php" method="post">
         <div class="form__content">
-          <input type="hidden" name="info" value="Обратный звонок">
+          <input type="hidden" name="info" value="Разовые услуги">
+          <input type="hidden" name="Разовые услуги" value="">
 
           <div class="input-div">
             <input type="text" class="input" name="name" placeholder="Представьтесь">
@@ -725,7 +768,8 @@
     <div class="form form--vertical">
       <form action="/mail.php" method="post">
         <div class="form__content">
-          <input type="hidden" name="info" value="Обратный звонок">
+          <input type="hidden" name="info" value="Оставьте заявку, и мы с Вами обсудим индивидуальные
+          условия предоставление клининговых услуг">
           <input type="hidden" name="Услуги для бизнеса" value="">
           
           <div class="input-div">

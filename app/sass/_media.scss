@@ -79,11 +79,43 @@
   .s {
 
     &-main {
-      padding-top: 110px;
-      
+      // padding-top: 110px;      
+    }
+
+    &-service {
+      .service {
+        &__tab {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &-about {
+      .about {
+        &__left {
+          position: relative;
+          left: 0;
+          .about__text {
+            text-align: left;
+            padding-left: 65px;
+            padding-right: 0;
+            &::before {
+              left: 0;
+            }
+          }
+        }
+        &__right {
+          position: relative;
+          right: 0;
+        }
+        &__text {
+          max-width: none;
+        }
+      }
     }
 
     &-advantage {
+      padding-top: 80px;
 
       .advantage {
         &__block {
@@ -92,6 +124,22 @@
         &__title, &__text {
           font-size: 18px;
         }
+      }
+    }
+
+    &-reviews {
+      .carousel-reviews {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-service2 {
+      &__content {
+        padding: 15px 0;
+      }      
+      &__title {
+        text-align: center;
+        margin-bottom: 15px;
       }
     }
 
@@ -137,6 +185,7 @@
       font-size: 16px;
     }
     &--horizontal {
+      padding: 20px 10px;
       .form {
         &__content {
           flex-direction: column;
@@ -180,11 +229,62 @@
 
   .s {
     &-main {
-      padding-top: 95px;
-      
+      margin-top: 86px;
+      padding-top: 50px;
+      &__title {
+        margin-bottom: 100px;
+      }
     } 
 
+    &-service {
+      .service {
+        &__tab {
+          padding: 20px 10px;
+        }
+      }
+      .komnata {
+        margin: 0 auto 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &__content {
+          display: block;
+        }
+      }
+    }
+
+    &-about {
+      padding: 40px 0 35px;
+      .about {
+        &__text {
+          font-size: 16px;
+          padding-left: 25px !important;
+          &::before {
+            width: 20px !important;
+          }
+        }
+      }
+
+      .tab {
+        &__content {
+          .form {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .form {
+        margin: 0 auto;
+      }
+    }
+
     &-advantage {
+      padding-top: 45px;
+
+      &__text {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
 
       .advantage {
         &__block {
@@ -196,6 +296,25 @@
         &__title, &__text {
           font-size: 14px;
         }
+      }
+    }
+
+    &-reviews {
+      .review {
+        display: block;
+        &__content {
+          margin: 0 auto 20px;
+        }
+        &__img {
+          margin: 0 auto 10px;
+        }
+      }
+    }
+
+    &-comand {
+      &__title {
+        font-size: 18px;
+        margin-bottom: 30px;
       }
     }
 
@@ -245,9 +364,76 @@
     padding: 25px 10px 10px;
   }
 
+  .srok {
+    display: block;
+    text-align: center;
+    &__title {
+      margin-bottom: 5px;
+    }
+  }
+
   .s {
     &-main {
-      
+      &__title {
+        font-size: 30px;
+        margin-bottom: 80px;
+      }
+      &__calculate {
+        margin: 0 auto;
+        &__title {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &-service {
+      padding-top: 40px;
+      .service {
+        &__tab {
+          margin: 0 0px 30px;
+        }
+        &__block {
+          display: block;
+          text-align: center;
+          .button {
+            width: 100%;
+          }
+        }
+        &__title {
+          font-size: 20px;
+        }
+        &__price {
+          margin-bottom: 10px;
+        }
+      }
+
+      .tab {
+        &__link {
+          padding: 5px;
+          font-size: 16px;
+        }
+      }
+
+      .komnata {
+        &__title {
+          margin: 25px auto 25px 0;
+        }
+      }
+    }
+
+    &-about {
+      .about {
+        &__text {
+          font-size: 15px;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+      }
+      .tab {
+        &__content {
+          padding: 20px 0 0 0;
+        }
+      }
     }
 
     &-advantage {
@@ -265,6 +451,42 @@
         &__block {
           width: 100%;
           background-color: #f3f7f4;
+        }
+      }
+    }
+
+    &-reviews {
+      .carousel-reviews {
+        padding: 0;
+      }
+      .review {
+        &__text {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-service2 {
+      &__title {
+        font-size: 18px;
+      }
+    }
+
+    &-comand {
+      .carousel-comand {
+        padding: 0 35px;
+      }
+      .comand {
+        display: block;
+        &__img {
+          margin: 0 auto 10px;
+        }
+        &__name {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        &__work {
+          margin-bottom: 10px;
         }
       }
     }

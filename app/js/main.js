@@ -250,13 +250,16 @@ $(".tab__link").click(function() {
   
   $(".carousel-comand").owlCarousel({
     loop: false,
+    dots: false,
+    nav: true,
     smartSpeed: 500,
     margin: 30,
     navText: ['', ''],
     responsive: {
-      0: { items: 1, mouseDrag: false, dots: true, nav: false },
-      580: { items: 1, mouseDrag: true, dots: false, nav: true },
-      767: { items: 2, }
+      0: { items: 1, mouseDrag: false },
+      580: { items: 1, mouseDrag: true,   },
+      767: { items: 1, },
+      991: { items: 2, }
     },
   });
 
