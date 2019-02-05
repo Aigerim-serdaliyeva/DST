@@ -939,6 +939,25 @@
   }
 }
 
+.question-modal {
+  max-width: 360px;
+  .question {
+    &--1 {
+      max-width: 360px;
+    }
+
+    &__num {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .button {
+      margin-top: 30px;
+      width: 140px;
+    }
+  }
+}
+
 .politika {
   max-width: 750px;
 

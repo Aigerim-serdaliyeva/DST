@@ -101,7 +101,7 @@
           <div class="s-main__calculate__title">Введите данные,
               чтобы рассчитать
               стоимость уборки</div>
-          <button class="button button--red">Рассчитать стоимость</button>
+          <button class="button button--red" data-remodal-target="question-modal">Рассчитать стоимость</button>
         </div>
       </div>
     </section>
@@ -554,7 +554,7 @@
               Введите данные, чтобы рассчитать индивидуальную стоимость услуг со скидкой</div>
           </div>
           <div class="col-lg-3 col-md-4">
-            <button class="button button--red">Рассчитать стоимость</button>
+            <button class="button button--red" data-remodal-target="question-modal">Рассчитать стоимость</button>
           </div>
         </div>
       </div>
@@ -693,6 +693,178 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <div class="remodal question-modal" data-remodal-id="question-modal" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+      
+    <div class="question" >
+      <div class="question__num">1. Выберите вид объекта</div>
+      <div class="question__variants">
+        <label class="label">
+          <span class="checkbox checkbox--image">
+            <input type="radio" name="object_type" value="kvartira-modal" checked>
+            <span></span>           
+          </span>
+          <span>Квартира</span>
+        </label>
+        <label class="label">
+          <span class="checkbox checkbox--image">
+            <input type="radio" name="object_type" value="dom-modal">
+            <span></span>
+          </span>
+          <span>Дом</span>
+        </label>
+        <label class="label">
+          <span class="checkbox checkbox--image">
+            <input type="radio" name="object_type" value="ofis-modal">
+            <span></span>
+          </span>
+          <span>Офис</span>
+        </label>
+      </div>
+      <div class="question__error"></div>
+      <a href="#kvartira-modal" class="button object-link">Дальше</a>
+    </div>
+    
+  </div>  
+
+  <div class="remodal object-modal" data-remodal-id="kvartira-modal" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+    <form action="/mail.php" method="post">
+      <input type="hidden" name="info" value="Quiz">
+      <input type="hidden" name="Вид_обекта" value="квартира">
+  
+      <div class="question " id="question-2">
+        <div class="question__num">Вопрос 2/2</div>
+        <div class="question__text">Заполните поля</div>
+        <input type="hidden" name="Вопрос2" value="Заполните поля">
+        <label class="label">
+          <span>Количество сотрудников</span>
+          <input type="number" name="Количество_сотрудников" value="" required>
+        </label>      
+        <label class="label">
+          <span>Комментария</span>
+          <input type="text" name="Комментария" value="" required>
+        </label>      
+        <div class="question__error"></div>
+        <a href="#" class="perehod" data-show="question-last" data-hide="question-2">Завершить тест</a>
+      </div>      
+  
+      <div class="question d-none" id="question-last">
+      <div class="question__text">Введите контактные данные</div>
+        <div class="form form--vertical">
+          <div class="form__content">
+            <div class="input-div">
+              <input type="text" class="input" name="name" placeholder="Введите имя" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="input-div">
+              <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="form__info">
+              * Ваши данные в безопасности <br>
+              и не будут переданы третьим лицам
+            </div>
+            <button type="submit" class="button ajax-submit">Узнать результаты теста</button>
+          </div>          
+        </div>
+      </div>
+  
+    </form>    
+  </div> 
+
+  <div class="remodal object-modal" data-remodal-id="dom-modal" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+    <form action="/mail.php" method="post">
+      <input type="hidden" name="info" value="Quiz">
+      <input type="hidden" name="Вид_обекта" value="Дом">
+  
+      <div class="question " id="question-2">
+        <div class="question__num">Вопрос 2/2</div>
+        <div class="question__text">Заполните поля</div>
+        <input type="hidden" name="Вопрос2" value="Заполните поля">
+        <label class="label">
+          <span>Количество сотрудников</span>
+          <input type="number" name="Количество_сотрудников" value="" required>
+        </label>      
+        <label class="label">
+          <span>Комментария</span>
+          <input type="text" name="Комментария" value="" required>
+        </label>      
+        <div class="question__error"></div>
+        <a href="#" class="perehod" data-show="question-last" data-hide="question-2">Завершить тест</a>
+      </div>      
+  
+      <div class="question d-none" id="question-last">
+      <div class="question__text">Введите контактные данные</div>
+        <div class="form form--vertical">
+          <div class="form__content">
+            <div class="input-div">
+              <input type="text" class="input" name="name" placeholder="Введите имя" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="input-div">
+              <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="form__info">
+              * Ваши данные в безопасности <br>
+              и не будут переданы третьим лицам
+            </div>
+            <button type="submit" class="button ajax-submit">Узнать результаты теста</button>
+          </div>          
+        </div>
+      </div>
+  
+    </form>    
+  </div>
+
+  <div class="remodal object-modal" data-remodal-id="ofis-modal" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+    <form action="/mail.php" method="post">
+      <input type="hidden" name="info" value="Quiz">
+      <input type="hidden" name="Вид_обекта" value="офис">
+  
+      <div class="question " id="question-2">
+        <div class="question__num">Вопрос 2/2</div>
+        <div class="question__text">Заполните поля</div>
+        <input type="hidden" name="Вопрос2" value="Заполните поля">
+        <label class="label">
+          <span>Количество сотрудников</span>
+          <input type="number" name="Количество_сотрудников" value="" required>
+        </label>      
+        <label class="label">
+          <span>Комментария</span>
+          <input type="text" name="Комментария" value="" required>
+        </label>      
+        <div class="question__error"></div>
+        <a href="#" class="perehod" data-show="question-last" data-hide="question-2">Завершить тест</a>
+      </div>      
+  
+      <div class="question d-none" id="question-last">
+      <div class="question__text">Введите контактные данные</div>
+        <div class="form form--vertical">
+          <div class="form__content">
+            <div class="input-div">
+              <input type="text" class="input" name="name" placeholder="Введите имя" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="input-div">
+              <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="form__info">
+              * Ваши данные в безопасности <br>
+              и не будут переданы третьим лицам
+            </div>
+            <button type="submit" class="button ajax-submit">Узнать результаты теста</button>
+          </div>          
+        </div>
+      </div>
+  
+    </form>    
   </div>
 
   <div class="remodal remodal--small" data-remodal-id="zvonok-modal" data-remodal-options="hashTracking: true">

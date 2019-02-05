@@ -237,6 +237,13 @@ $(".tab__link").click(function() {
   $tab.find(".tab__content").removeClass("active").filter("[data-tab=" + id + "]").addClass("active");
 });
 
+
+$('[name="object_type"]').click( function() {
+  var val = $(this).val();
+  $(this).closest('.question-modal').find('.object-link').attr('href', '#' + val);
+});
+
+
   $(".carousel-reviews").owlCarousel({
     loop: false,
     smartSpeed: 500,
