@@ -428,6 +428,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   color: $text_color;
   max-width: 80%;
+  padding: 45px 20px 30px;
 
   &-close {
     left: auto;
@@ -461,6 +462,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   user-select: none;
+  font-size: 16px;
   cursor: pointer;
   margin-bottom: 10px;
   

@@ -22,7 +22,7 @@ $(document).ready(function () {
   new WOW({ mobile: false }).init();
 
   if ($wnd.width() < 992) {
-    headerHeight = 87;
+    headerHeight = 86;
   }
 
   // jquery.maskedinput для ПК и планшет (мобильном не подключаем)
@@ -179,10 +179,11 @@ $(".perehod").click(function(e) {
   e.preventDefault();
   var $this = $(this);
 
-  var $show = $questionModal.find("#" + $this.data("show"));
-  var $hide = $questionModal.find("#" + $this.data("hide"));
+  var $show = $("#" + $this.data("show"));
+  var $hide = $("#" + $this.data("hide"));
 
-  var $question = $this.closest(".question");
+  var $question = $this.closest(".question__content").find('.question');
+  $('.object-modal').addClass('object-modal--min');
   var variantSelected = false;
   var drugoeSelected = false;
 
@@ -227,6 +228,16 @@ $(".perehod").click(function(e) {
   $hide.addClass("d-none");
 });
 
+/* Этот код используется если Quiz будет открываться в модальнос окне. При закрытия модального окна Quiz вернется в первоначальный вид. (То есть будет виден первый вопрос и уберется все ошибки)*/
+var $objectModal = $('.object-modal');
+$(document).on('closed', '.object-modal', function (e) {
+  $objectModal.find('.question__content')
+  	.removeClass('has-error')    
+    .removeClass('d-none');
+    $objectModal.find('#question-last').addClass('d-none');
+    $objectModal.removeClass('object-modal--min');
+});
+
 
 $(".tab__link").click(function() {
   var $tab = $(this).closest(".tab");
@@ -243,6 +254,18 @@ $('[name="object_type"]').click( function() {
   $(this).closest('.question-modal').find('.object-link').attr('href', '#' + val);
 });
 
+  $('.vopros-icon').click( function() {
+    $(this).find('.vopros__block').removeClass('d-none');
+  });
+
+  $('.vopros-icon').blur( function() {
+    $(this).find('.vopros__block').addClass('d-none');
+  });
+
+  $('.label-5').click(function() {
+    var type = $(this).data("type");
+    $('.question-5').addClass('d-none').filter('[data-type="'+ type +'"]').removeClass('d-none');
+  });
 
   $(".carousel-reviews").owlCarousel({
     loop: false,

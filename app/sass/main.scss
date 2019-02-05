@@ -296,13 +296,14 @@
       width: 100%;
       text-align: center;
       user-select: none;
+      margin-bottom: -1px;
       
       &:last-child {
       }
       
       &.active {
         border-top: 3px solid $accent;
-        border-bottom: 1px solid transparent !important;
+        border-bottom: 1px solid #f3f3f3;
         border-left: 1px solid #000;
         border-right: 1px solid #000;
       }
@@ -325,6 +326,7 @@
   .service {
     background-color: #f3f3f3;
     padding: 35px 20px;
+    width: 100%;
     &:first-child {
       margin-bottom: 30px;
     }
@@ -360,6 +362,7 @@
     &__tab {
       background-color: #f3f3f3;
       padding: 35px 20px;
+      width: 100%;
     }
 
     &__title {
@@ -453,8 +456,14 @@
   .tab {
     &__links {
       display: flex;
-      border-bottom: 1px solid #fff;
+      // border-bottom: 1px solid #fff;
       justify-content: center;
+      &::after, &::before {
+        content: "";
+        display: block;
+        border-bottom: 1px solid #fff;
+        flex-grow: 1;
+      }
     }
     
     &__link {
@@ -464,16 +473,13 @@
       max-width: 220px;
       width: 100%;
       text-align: center;
-      // border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #fff;
       user-select: none;
-      
-      &:last-child {
-        // border-right: 1px solid #000;
-      }
-      
+      border-top: 3px solid transparent;
+            
       &.active {
-        border-top: 3px solid $accent;
-        border-bottom: 1px solid transparent !important;
+        border-top-color: $accent;
+        border-bottom-color: transparent;
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
       }
@@ -941,19 +947,118 @@
 
 .question-modal {
   max-width: 360px;
-  .question {
-    &--1 {
-      max-width: 360px;
-    }
+  
+}
 
-    &__num {
-      font-size: 20px;
+.question {
+  margin-bottom: 30px;
+  
+  .label {
+    img {
+      margin-left: 5px;      
+    }    
+  }
+
+  .vopros {
+    &__block {
+      width: 340px;
+      // display: none;
+      padding: 15px;
+      background-color: #f3f3f3;
+      position: absolute;
+      left: calc(100% + 5px);
+      top: 0;
+      z-index: 20;
+      outline: none;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        max-width: 170px;
+        li {
+          list-style: none;
+          font-size: 10px;          
+          width: 100%;
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    &__content {
+      display: flex;
+    }
+    &__title {
       font-weight: bold;
-      margin-bottom: 20px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    &-icon {
+      position: relative;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  &__num {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .button {
+    margin-top: 30px;
+    width: 140px;
+  }
+  &__button {
+    text-align: right;
+  }
+  &__blocks {
+    display: flex;
+  }
+  &__block {
+    &--1 {
+      max-width: 295px;
+      margin-right: 45px;
+    }
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+  }
+  .number {
+    width: 48px;
+    height: 23px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin-right: 8px;
+    &__title {
+      font-size: 12px;
+    }
+  }
+}
+
+.object-modal {
+  max-width: 700px;
+  &--min {    
+    padding: 0;
+    max-width: 360px;
+  }
+  .form {
+    &__title {
+      font-size: 20px;
+      font-weight: 500;
+    } 
+    &__content {
+      max-width: 200px;
     }
     .button {
-      margin-top: 30px;
-      width: 140px;
+      margin-top: 0;
+      width: auto;
+      width: 100%;
+    }   
+    &__info {
+      color: #fff;
+      letter-spacing: -0.5px;
     }
   }
 }
