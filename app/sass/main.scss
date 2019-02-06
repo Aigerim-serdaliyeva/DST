@@ -297,12 +297,13 @@
       text-align: center;
       user-select: none;
       margin-bottom: -1px;
+      border-top: 3px solid transparent;
       
       &:last-child {
       }
       
       &.active {
-        border-top: 3px solid $accent;
+        border-top-color: $accent;
         border-bottom: 1px solid #f3f3f3;
         border-left: 1px solid #000;
         border-right: 1px solid #000;
@@ -456,7 +457,6 @@
   .tab {
     &__links {
       display: flex;
-      // border-bottom: 1px solid #fff;
       justify-content: center;
       &::after, &::before {
         content: "";
