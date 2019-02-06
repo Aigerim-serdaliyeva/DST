@@ -179,8 +179,13 @@ $(".perehod").click(function(e) {
   e.preventDefault();
   var $this = $(this);
 
-  var $show = $("#" + $this.data("show"));
-  var $hide = $("#" + $this.data("hide"));
+  var $modal = $this.closest(".object-modal");
+  $modal.addClass('object-modal--min');
+
+  var $show = $modal.find("#" + $this.data("show"));
+  var $hide = $modal.find("#" + $this.data("hide"));
+
+  var $question = $modal.find('.question');
 
   var $question = $this.closest(".question__content").find('.question');
   $('.object-modal').addClass('object-modal--min');
