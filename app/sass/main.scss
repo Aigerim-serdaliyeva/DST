@@ -1035,7 +1035,7 @@
     }
     &__block {
       display: flex;
-    }
+    }    
   }
   .number {
     width: 48px;
@@ -1044,6 +1044,11 @@
     border-radius: 3px;
     margin-right: 8px;
     text-align: center;
+    padding-top: 3px;
+    font-size: 15px;
+    &--left {
+      margin: 0 0 0 8px;
+    }
     &__title {
       font-size: 12px;
     }

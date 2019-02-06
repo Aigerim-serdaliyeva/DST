@@ -1538,32 +1538,36 @@
                 помещениях, кроме рабочих?</div>
               <input type="hidden" name="Вопрос5_1" value="Дополнительные услуги:">
               <div class="question__variants">                
-                <label class="label">
+                <label class="label mb-0">
                   <span class="checkbox checkbox--image">
-                    <div class="question__number">        
-                      <div class="number__title"> <div class="number__text">Кухня</div>  Укажите количество</div>    
-                      <input type="number" class="number" name="Ответ5_1_count" value="1">                  
-                    </div>
+                    <input type="checkbox" name="Ответ5_1[]" value="Кухня">
                     <span></span>           
                   </span>
+                  <span>Кухня</span>
                 </label>
-                <label class="label">
+                <div class="question__number mb-10 ml-23">        
+                  <div class="number__title">Укажите количество</div>    
+                  <input type="number" class="number number--left" name="Количество_кухнии" value="1">                  
+                </div>
+                <label class="label mb-0">
                   <span class="checkbox checkbox--image">
-                    <div class="question__number">        
-                      <div class="number__title"> <div class="number__text">Туалет</div>  Укажите общее
-                      количество кабинок</div>    
-                      <input type="number" class="number" name="Ответ5_1_count" value="1">                  
-                    </div>
+                    <input type="checkbox" name="Ответ5_1[]" value="Туалет">
                     <span></span>           
                   </span>
+                  <span>Туалет</span>
                 </label>
+                <div class="question__number mb-10 ml-23">        
+                  <div class="number__title"> Укажите общее <br> количество кабинок</div>    
+                  <input type="number" class="number number--left" name="Количество_кабинок_туалета" value="1">                  
+                </div>
+
                 <label class="label">
                   <span class="checkbox checkbox--image">
-                    <input type="radio" name="Ответ1" value="Другое" class="drugoe">
+                    <input type="radio" name="Ответ5_1[]" value="Другое" class="drugoe">
                     <span></span>
                   </span>
                   <span>Другое</span>
-                  <input type="text" name="Ответ1_текст" placeholder="введите текст*" class="ukazat">
+                  <input type="text" name="Ответ5_1_другое" placeholder="введите текст*" class="ukazat">
                 </label>                           
               </div>
               <div class="question__error"></div>
