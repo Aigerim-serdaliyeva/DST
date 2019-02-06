@@ -372,6 +372,35 @@
     }
   }
 
+  .question {
+    .label {
+      font-size: 14px;
+    }
+    &__num {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    &__blocks {
+      display: block;
+    }
+    &__block {
+      .question {
+        margin-bottom: 20px;
+      }
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .object-modal {
+    .form {
+      &__title {
+        font-size: 18px;
+      }
+    }
+  }
+
   .s {
     &-main {
       &__title {

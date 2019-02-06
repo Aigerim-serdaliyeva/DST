@@ -950,8 +950,7 @@
   
 }
 
-.question {
-  margin-bottom: 30px;
+.question {  
   
   .label {
     img {
@@ -975,6 +974,9 @@
         margin: 0;
         padding: 0;
         max-width: 170px;
+        &:first-child {
+          margin-right: 10px;
+        }
         li {
           list-style: none;
           font-size: 10px;          
@@ -1016,14 +1018,24 @@
     display: flex;
   }
   &__block {
+    .question {
+      margin-bottom: 30px;
+    }
     &--1 {
-      max-width: 295px;
+      max-width: 310px;
+      width: 100%;
       margin-right: 45px;
     }
   }
   &__number {
     display: flex;
     align-items: center;
+    &:first-child {
+      margin-right: 15px;
+    }
+    &__block {
+      display: flex;
+    }
   }
   .number {
     width: 48px;
@@ -1031,8 +1043,12 @@
     border: 1px solid #000;
     border-radius: 3px;
     margin-right: 8px;
+    text-align: center;
     &__title {
       font-size: 12px;
+    }
+    &__text {
+      font-size: 16px;
     }
   }
 }
