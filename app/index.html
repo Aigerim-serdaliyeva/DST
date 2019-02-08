@@ -133,7 +133,7 @@
                           <div class="komnata__month">раз (-а) в месяц</div>
                         </div>
                         <div class="komnata__price">6 300 тг.</div>
-                        <button class="button">Заказать</button>
+                        <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Уборка квартир","value":"1 комната"}]}'>Заказать</button>
                       </div>
                       <div class="komnata">
                         <div class="komnata__block">
@@ -145,7 +145,7 @@
                           <div class="komnata__month">раз (-а) в месяц</div>
                         </div>
                         <div class="komnata__price">7 300 тг.</div>
-                        <button class="button">Заказать</button>
+                        <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Уборка квартир","value":"2 комнаты"}]}'>Заказать</button>
                       </div>
                       <div class="komnata">
                         <div class="komnata__block">
@@ -157,7 +157,7 @@
                           <div class="komnata__month">раз (-а) в месяц</div>
                         </div>
                         <div class="komnata__price">8 200 тг.</div>
-                        <button class="button">Заказать</button>
+                        <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Уборка квартир","value":"3 комнаты"}]}'>Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -168,7 +168,7 @@
                     <div class="komnata__price komnata__price--left">
                       <span>Стоимость от</span> 250 тг./м2
                     </div>
-                    <button class="button">Заказать</button>
+                    <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Уборка квартир","value":"Генеральная уборка по-генеральски"}]}'>Заказать</button>
                   </div>
                 </div>
               </div>
@@ -180,7 +180,7 @@
               <div class="service__text">Владеть коттеджом – большое удовольствие. Убирать коттедж – удовольствие сомнительное. Для всех… кроме нас! Мы с удовольствием наведём порядок и чистоту в вашем коттедже.</div>
               <div class="service__block">
                 <div class="service__price">от <span>7 000 тг.</span></div>
-                <button class="button">Заказать</button>
+                <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Уборка квартир","value":"Уборка коттеджей"}]}'>Заказать</button>
               </div>
             </div>
             <div class="service">
@@ -192,7 +192,7 @@
                   - а потом всё лишнее вынесут и выбросят.</div>
               <div class="service__block">
                 <div class="service__price">от <span>350 тг./м2</span></div>
-                <button class="button">Заказать</button>
+                <button class="button" data-remodal-target="zakazat_uslugi" data-remodal-info='{"info":[{"prop":"Уборка квартир","value":"Уборка после ремонта"}]}'>Заказать</button>
               </div>
             </div>
           </div>
@@ -273,6 +273,7 @@
                 <div class="form form--horizontal inverse wow slideInUp">
                   <form action="/mail.php" method="post">
                     <div class="form__title">Попробуйте разовую стандартную уборку квартиры со скидкой</div>
+                    <div class="form__price">Разовая уборка квартиры <input class="number" type="number" value="1"> <span>комната (-ы)</span> <div class="price">7 500 тг.</div> <span>вместо</span> <div class="price__none">8 500 тг. <div class="line"></div> </div> </div>
                     <div class="form__content">
         
                       <input type="hidden" name="info" value="Попробуйте разовую стандартную уборку квартиры со скидкой">
@@ -385,11 +386,15 @@
               </div>
             </div>
             <div class="advantage__content">
-              <div class="advantage__block">
+              <div class="advantage__block d-none d-sm-block">
                 <div class="advantage__text advantage__text--right">Гипоалергенные сертифицированные
                     моющие средства</div>
               </div>
-              <div class="advantage__img"><img src="./img/advantage-2.jpg" alt=""></div>              
+              <div class="advantage__img"><img src="./img/advantage-2.jpg" alt=""></div>
+              <div class="advantage__block advantage__block__none">
+                <div class="advantage__text">Гипоалергенные сертифицированные
+                    моющие средства</div> 
+            </div>             
             </div>
             <div class="advantage__content">
               <div class="advantage__img"><img src="./img/advantage-3.jpg" alt=""></div>              
@@ -407,7 +412,7 @@
       <div class="container">
         <h2 class="section-title">Отзывы</h2>
         <div class="row">
-          <div class="col-lg-9">
+          <div class="col-lg-12">
             <div class="owl-carousel carousel-reviews">
               <div class="review">
                 <div class="review__content">
@@ -439,7 +444,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <!-- <div class="col-lg-3">
             <div class="owl-carousel carousel-pismo">
               <div class="pismo">
                 <a href="./img/pismo-big-1.jpg" data-fancybox="pismoGallery" class="pismo__img">
@@ -456,7 +461,7 @@
                     корпоративных клиентов</div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -560,7 +565,7 @@
       </div>
     </section>
 
-    <section class="section s-comand">
+    <!-- <section class="section s-comand">
       <div class="container">
         <h2 class="section-title">Команда</h2>
         <div class="s-comand__title">Нас вдохновляет вид неубранных помещений.  <br>
@@ -592,7 +597,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     
     <section class="section s-company" id="company">
       <div class="container">
@@ -606,7 +611,7 @@
               </div>
               <div class="col-6">
                 <div class="company__title company__title--min">150 000</div>
-                <div class="company__text">Ежемесячно стираем более
+                <div class="company__text">Ежемесячно стираем более <br>
                     150 000 кг белья    </div>
               </div>
               <div class="col-6">
@@ -1428,7 +1433,7 @@
               <div class="question__variants">
                 <label class="label label-5" data-type="standart">
                   <span class="checkbox checkbox--image">
-                    <input type="radio" name="Ответ3[]" value="Стандартная" checked>
+                    <input type="radio" name="Ответ3[]" value="Стандартная" >
                     <span></span>           
                   </span>
                   <span>Стандартная</span> 
@@ -1532,7 +1537,7 @@
             </div>
           </div>
           <div class="question__block">
-            <div class="question question-5" data-type="standart">
+            <div class="question" data-type="standart">
               <div class="question__num">5. Нужна ли уборка
                 в дополнительных
                 помещениях, кроме рабочих?</div>
@@ -1644,8 +1649,8 @@
     <div class="form form--vertical">
       <form action="/mail.php" method="post">
         <div class="form__content">
-          <input type="hidden" name="info" value="Разовые услуги">
-          <input type="hidden" name="Разовые услуги" value="">
+          <input type="hidden" name="info" value="Уборка квартир">
+          <input type="hidden" name="Уборка квартир" value="">
 
           <div class="input-div">
             <input type="text" class="input" name="name" placeholder="Представьтесь">

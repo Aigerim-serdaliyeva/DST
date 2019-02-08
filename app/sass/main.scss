@@ -573,6 +573,44 @@
 
   .form {
     margin-bottom: -120px;
+    &__title {
+      letter-spacing: -0.5px;
+    }
+    .number {
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      width: 52px;
+      text-align: center;
+      color: #fff;
+    }
+    &__price {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: center;
+      span {
+        font-size: 12px;
+      }
+    }
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      display: inline;  
+      &__none {
+        position: relative;
+        font-size: 12px;
+        display: inline;
+      }    
+    }
+    
+    .line {
+      position: absolute;     
+      width: 45px;
+      height: 1px;
+      background-color: #fff;
+      top: 7px;
+      left: 0;
+    }
   } 
   
 }
@@ -603,6 +641,9 @@
     &__block {
       padding: 50px 28px;
       width: 50%;
+      &__none {
+        display: none;
+      }
     }
 
     &__title {
@@ -633,6 +674,8 @@
 
   .carousel-reviews {
     padding: 0 72px;
+    max-width: 825px;
+    margin: 0 auto;
   }
 
   .review {
