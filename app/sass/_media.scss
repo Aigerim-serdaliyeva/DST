@@ -182,7 +182,7 @@
 
   .form {
     &__title {
-      font-size: 16px;
+      font-size: 18px;
     }
     &--horizontal {
       padding: 20px 10px;
@@ -275,6 +275,20 @@
 
       .form {
         margin: 0 auto;
+        padding: 20px 5px;
+
+        .number {
+          width: 35px;
+        }
+
+        &__price {
+          max-width: 300px;
+          margin: 0 auto 20px;
+          font-size: 13.5px;
+          .price {
+            font-size: 16px;
+          }
+        }
       }
     }
 
